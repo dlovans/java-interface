@@ -9,9 +9,11 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         animalInteractions(new Dog(), new Cat());
-        printAreaAndPerimeter(new Rectangle(5, 5), new Circle(5));
+        printAreaAndPerimeter(new Rectangle(5, 5));
+        printAreaAndPerimeter(new Circle(5));
         testDevices();
-        freewayEvents(new Car(), new Bicycle());
+        freewayEvents(new Car());
+        freewayEvents(new Bicycle());
         mediaPlayback(new AudioPlayer());
         mediaPlayback(new VideoPlayer());
     }
@@ -30,14 +32,11 @@ public class Main {
 
     /**
      * Prints area of shapes.
-     * @param rectangle - A rectangle.
-     * @param circle - A circle.
+     * @param shape - A shape.
      */
-    private static void printAreaAndPerimeter(Rectangle rectangle, Circle circle) {
-        System.out.printf("%.2f\n", rectangle.area());
-        System.out.printf("%.2f\n", rectangle.perimeter());
-        System.out.printf("%.2f\n", circle.area());
-        System.out.printf("%.2f\n", circle.perimeter());
+    private static void printAreaAndPerimeter(Shape shape) {
+        System.out.printf("%.2f\n", shape.area());
+        System.out.printf("%.2f\n", shape.perimeter());
     }
 
     /**
@@ -65,12 +64,10 @@ public class Main {
 
     /**
      * Events unfolding on the freeway, two perspectives.
-     * @param car - A car.
-     * @param bicycle - A bicycle.
+     * @param vehicle - A vehicle
      */
-    private static void freewayEvents(Car car, Bicycle bicycle) {
-        car.move();
-        bicycle.move();
+    private static void freewayEvents(Vehicle vehicle) {
+        vehicle.move();
     }
 
     /**
