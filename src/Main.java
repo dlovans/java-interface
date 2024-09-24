@@ -1,6 +1,7 @@
 import Animal.*;
 import Shape.*;
 import ElectronicDevice.*;
+import Vehicle.*;
 
 import java.util.ArrayList;
 
@@ -9,6 +10,7 @@ public class Main {
         animalInteractions(new Dog(), new Cat());
         printAreaAndPerimeter(new Rectangle(5, 5), new Circle(5));
         testDevices();
+        freewayEvents(new Car(), new Bicycle());
     }
 
     /**
@@ -56,5 +58,15 @@ public class Main {
         for (ElectronicDevice device : devices) {
             device.turnOff();
         }
+    }
+
+    /**
+     * Events unfolding on the freeway, two perspectives.
+     * @param car - A car.
+     * @param bicycle - A bicycle.
+     */
+    private static void freewayEvents(Car car, Bicycle bicycle) {
+        car.move();
+        bicycle.move();
     }
 }
