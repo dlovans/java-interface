@@ -2,6 +2,7 @@ import Animal.*;
 import Shape.*;
 import ElectronicDevice.*;
 import Vehicle.*;
+import Player.*;
 
 import java.util.ArrayList;
 
@@ -11,6 +12,8 @@ public class Main {
         printAreaAndPerimeter(new Rectangle(5, 5), new Circle(5));
         testDevices();
         freewayEvents(new Car(), new Bicycle());
+        mediaPlayback(new AudioPlayer());
+        mediaPlayback(new VideoPlayer());
     }
 
     /**
@@ -68,5 +71,15 @@ public class Main {
     private static void freewayEvents(Car car, Bicycle bicycle) {
         car.move();
         bicycle.move();
+    }
+
+    /**
+     * Media playback.
+     * @param player - Media player.
+     */
+    private static void mediaPlayback(Player player) {
+        player.play();
+        player.pause();
+        player.stop();
     }
 }
