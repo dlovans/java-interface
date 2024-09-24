@@ -12,7 +12,7 @@ public class Main {
      * @param dog - A dog.
      * @param cat - A cat.
      */
-    private static void animalInteractions(Animal dog, Animal cat) {
+    private static void animalInteractions(Dog dog, Cat cat) {
         dog.sound();
         cat.sound();
         dog.eat();
