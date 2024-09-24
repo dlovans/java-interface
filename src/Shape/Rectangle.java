@@ -8,12 +8,12 @@ public class Rectangle implements Shape {
     /**
      * Width of rectangle.
      */
-    double width;
+    final private double width;
 
     /**
      * Height of rectangle.
      */
-    double height;
+    final private double height;
 
     /**
      * Creates an instance of Rectangle.
