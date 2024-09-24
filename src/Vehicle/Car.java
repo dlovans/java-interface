@@ -2,8 +2,9 @@ package Vehicle;
 
 /**
  * Represents a car.
+ * Implements Vehicle.
  */
-public class Car {
+public class Car implements Vehicle {
     /**
      * Car in police chase.
      */
